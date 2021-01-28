@@ -1,0 +1,9 @@
+body{
+    padding: 100px;
+}
+.login-area{
+    margin-top: 50px;
+    box-shadow: 5px 5px 20px rgb(129, 126, 126);
+    padding: 30px;
+    border-radius: 12px;
+}
