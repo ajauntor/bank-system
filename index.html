@@ -58,9 +58,9 @@
             <div class="col-md-6">
                 <div class="login-area">
                     <h3>Withdraw</h3>
-                <input class="form-control" placeholder="Enter amount to withdraw">
+                <input id="withdraw-value" class="form-control" placeholder="Enter amount to withdraw">
                 <br>
-                <button class="btn btn-primary">Withdraw</button>
+                <button id="withdraw-btn" class="btn btn-primary">Withdraw</button>
                 </div>
             </div>
         </div>
@@ -84,14 +84,27 @@
         // deposit event handlar
         const depositBtn = document.getElementById("deposit-btn");
         depositBtn.addEventListener("click", function(){
-            const depositAmount = document.getElementById("deposit-amount").value;
-            const depositNumber = parseFloat(depositAmount);
+            const depositNumber = getInputNumber("deposit-amount");
 
             document.getElementById("deposit-amount").value ="";
 
             changeInnerText("current-deposit", depositNumber);
             changeInnerText("current-balance", depositNumber );
         })
+
+        // Withdraw button handlar
+        const withdrawButton = document.getElementById("withdraw-btn");
+        withdrawButton.addEventListener("click", function(){
+            const withdrawNumber = getInputNumber("withdraw-value");
+            console.log(withdrawNumber);
+        })
+
+        function getInputNumber (id){
+            const amount= document.getElementById(id).value;
+            const amountNumber = parseFloat(amount);
+            return amountNumber;
+        }
+
         function changeInnerText(id, depositNumber){
             const current = document.getElementById(id).innerText;
             const currentNumber = parseFloat(current);
