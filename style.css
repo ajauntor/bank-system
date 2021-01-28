@@ -7,3 +7,22 @@ body{
     padding: 30px;
     border-radius: 12px;
 }
+#transaction-area{
+    display: none;
+}
+.coloum-style{
+    margin: 0 20px;
+    padding: 30px;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px dimgray;
+}
+.deposit{
+    background-color: slateblue;
+}
+.withdraw{
+    background-color: lightsalmon;
+}
+.amount{
+    background-color: orange;
+}
