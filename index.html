@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page - bank of Asia user login page </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div id="login-page">
+        <h1 class="text-center text-info">Welcome to Bank of Asia</h1>
+        <div class="login-area">
+            <h3>Login</h3>
+            <input class="form-control" type="email" placeholder="Enter Your email">
+            <br>
+            <input class="form-control" type="password" placeholder="Enter your password">
+            <button id="login" class="btn btn-success mt-3">Enter</button>
+        </div>
+    </div>
+
+    <script>
+        const loginButton = document.getElementById("login");
+        loginButton.addEventListener("click", function(){
+            const loginArea = document.getElementById("login-page");
+            loginArea.style.display = "none";
+            
+        })
+    </script>
+
+</body>
+</html>
